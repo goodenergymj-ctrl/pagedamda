@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>가격 안내 · page.damda</title>
+<meta name="description" content="교육 비즈니스를 아는 사람이 만드는 홈페이지. 제작 가격과 케어 플랜을 확인하세요.">
+<style>
+@font-face{font-family:'Paperlogy';font-weight:400;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2')}
+@font-face{font-family:'Paperlogy';font-weight:600;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Paperlogy';font-weight:700;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2')}
+@font-face{font-family:'Paperlogy';font-weight:800;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2')}
+@font-face{font-family:'Paperlogy';font-weight:900;font-style:normal;font-display:swap;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2')}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --acc:#FFB81C;--acc-d:#E6A312;--acc-fg:#1A1A1A;
+  --ink:#141414;--ink2:#242424;--ink3:#6B6B6E;--ink4:#B4B4B8;
+  --cream:#F4EFE3;
+  --sans:'Paperlogy',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+html{background:var(--cream);scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;padding-bottom:80px}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none}
+
+/* 상단 바 */
+.top-bar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(244,239,227,.9);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(26,18,8,.08);
+  padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.top-logo{font-size:18px;font-weight:900;letter-spacing:-0.5px}
+.top-logo span{color:var(--acc)}
+.top-back{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink3);transition:color .2s}
+.top-back:hover{color:var(--ink)}
+.top-back svg{width:16px;height:16px}
+
+/* 래퍼 */
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* 히어로 */
+.price-hero{padding:52px 0 40px;text-align:center}
+.price-eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.2px;color:var(--acc);background:rgba(255,184,28,.12);padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.price-title{font-size:36px;font-weight:900;letter-spacing:-1.5px;line-height:1.2;margin-bottom:12px}
+.price-sub{font-size:15px;color:var(--ink3);line-height:1.7;max-width:480px;margin:0 auto}
+@media(max-width:600px){.price-title{font-size:26px}}
+
+/* 섹션 타이틀 */
+.sec-title{font-size:22px;font-weight:900;letter-spacing:-0.8px;margin-bottom:6px}
+.sec-sub{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:24px}
+.sec-sub strong{color:var(--ink);font-weight:700}
+
+/* 제작 가격 카드 */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+@media(max-width:700px){.pricing-grid{grid-template-columns:1fr}}
+
+.pcard{background:#fff;border:1.5px solid rgba(26,18,8,.08);border-radius:16px;padding:24px 20px 20px;display:flex;flex-direction:column;position:relative}
+.pcard--featured{border-color:var(--acc);box-shadow:0 8px 32px -8px rgba(255,184,28,.3)}
+.pcard-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--acc);color:var(--acc-fg);font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;white-space:nowrap;letter-spacing:.3px}
+.pcard-label{font-size:11px;font-weight:800;letter-spacing:.8px;color:var(--ink3);display:block;margin-bottom:6px}
+.pcard-price{display:flex;align-items:baseline;gap:2px;margin-bottom:8px}
+.pcard-num{font-size:38px;font-weight:900;letter-spacing:-2px;color:var(--ink)}
+.pcard-unit{font-size:14px;font-weight:600;color:var(--ink3)}
+.pcard-for{font-size:11.5px;line-height:1.7;color:var(--ink3);margin-bottom:16px}
+.pcard-list{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:7px;border-top:1px solid rgba(26,18,8,.07);padding-top:14px;flex:1}
+.pcard-list li{font-size:12.5px;color:var(--ink2);padding-left:16px;position:relative;line-height:1.5}
+.pcard-list li::before{content:'✓';position:absolute;left:0;color:var(--acc);font-weight:800;font-size:11px;top:1px}
+.pcard-btn{display:block;text-align:center;padding:12px;border-radius:10px;font-size:13px;font-weight:700;transition:opacity .2s,transform .2s;margin-top:auto}
+.pcard-btn:hover{opacity:.85;transform:translateY(-1px)}
+.pcard-btn--fill{background:var(--acc);color:var(--acc-fg)}
+.pcard-btn--outline{border:1.5px solid rgba(26,18,8,.15);color:var(--ink)}
+
+/* 케어 카드 */
+.care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+@media(max-width:700px){.care-grid{grid-template-columns:1fr}}
+
+.ccard{background:#fff;border:1.5px solid rgba(26,18,8,.08);border-radius:16px;padding:24px 20px 20px;display:flex;flex-direction:column;gap:10px;position:relative}
+.ccard--featured{border-color:var(--acc);box-shadow:0 8px 32px -8px rgba(255,184,28,.3)}
+.ccard-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--acc);color:var(--acc-fg);font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;white-space:nowrap}
+.ccard-label{font-size:11px;font-weight:800;letter-spacing:.8px;color:var(--ink3);display:block;margin-bottom:6px}
+.ccard-price{display:flex;align-items:baseline;gap:2px}
+.ccard-num{font-size:34px;font-weight:900;letter-spacing:-1.5px;color:var(--ink)}
+.ccard-unit{font-size:13px;font-weight:600;color:var(--ink3)}
+.ccard-desc{font-size:12px;line-height:1.7;color:var(--ink3);border-top:1px solid rgba(26,18,8,.07);padding-top:10px}
+
+/* 안내 메모 */
+.price-note{font-size:11.5px;color:var(--ink4);text-align:center;line-height:1.8;margin-bottom:48px}
+
+/* 섹션 구분 */
+.price-sec{padding-top:48px;border-top:1px solid rgba(26,18,8,.08);margin-top:48px}
+
+.ctable-desc{font-size:11px;color:var(--ink4);font-weight:400;line-height:1.5}
+.care-compare{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:12px}
+.ctable{width:100%;border-collapse:collapse;min-width:480px}
+.ctable th,.ctable td{padding:13px 16px;text-align:center;font-size:13px;border-bottom:1px solid rgba(26,18,8,.07)}
+.ctable thead th{font-size:13px;font-weight:800;color:var(--ink);background:#fff;position:sticky;top:0}
+.ctable thead th:first-child{text-align:left;background:transparent}
+.ctable-label{text-align:left !important;font-weight:600;color:var(--ink2);font-size:13px}
+.ctable-featured{background:rgba(255,184,28,.07) !important;border-left:2px solid var(--acc);border-right:2px solid var(--acc)}
+.ctable-badge{display:inline-block;background:var(--acc);color:var(--acc-fg);font-size:9px;font-weight:800;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle}
+.ctable-num{font-size:26px;font-weight:900;letter-spacing:-1px;color:var(--ink)}
+.ctable-unit{font-size:12px;font-weight:600;color:var(--ink3)}
+.ctable-annual{font-size:11px;color:var(--ink4)}
+.ctable-price-row td{padding:16px;border-bottom:2px solid rgba(26,18,8,.1)}
+.ctable-cta-row td{padding:14px;border-bottom:none}
+.ctable-cta-row .pcard-btn{padding:10px 14px;font-size:12px}
+.ccard-annual{font-size:11px;color:var(--ink4);margin-top:4px}
+/* 하단 CTA */
+.price-cta{
+  background:var(--acc);border-radius:20px;padding:36px 32px;text-align:center;margin-top:48px;
+}
+.price-cta h3{font-size:22px;font-weight:900;letter-spacing:-0.8px;color:var(--acc-fg);margin-bottom:8px}
+.price-cta p{font-size:13px;color:rgba(26,18,8,.6);margin-bottom:20px;line-height:1.6}
+.price-cta a{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--acc-fg);color:#fff;
+  font-size:15px;font-weight:800;
+  padding:14px 28px;border-radius:12px;
+  transition:opacity .2s;
+}
+.price-cta a:hover{opacity:.85}
+</style>
+</head>
+<body>
+
+<header class="top-bar">
+  <a href="./index.html" class="top-logo">page<span>.</span>damda</a>
+  <a href="./index.html" class="top-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    홈으로 돌아가기
+  </a>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- 히어로 -->
+    <div class="price-hero">
+      <span class="price-eyebrow">가격 안내</span>
+      <h1 class="price-title">명확한 가격,<br>숨은 비용 없습니다.</h1>
+      <p class="price-sub">에이전시 평균 제작비 <strong>430만원</strong> — 기획·카피·코딩을 대표가 직접 담당해 중간 마진 없이 합리적으로 드립니다.</p>
+    </div>
+
+    <!-- 제작 가격 -->
+    <div>
+      <p class="sec-title">제작 가격</p>
+      <p class="sec-sub">교육 비즈니스를 아는 사람이 만드는 홈페이지. 템플릿 없이 처음부터 직접 설계합니다.</p>
+
+      <div class="pricing-grid">
+        <div class="pcard">
+          <div>
+            <span class="pcard-label">랜딩 1P</span>
+            <div class="pcard-price"><span class="pcard-num">180</span><span class="pcard-unit">만원</span></div>
+            <p class="pcard-for">✦ 강의·코칭 홍보 시작하는 분<br>✦ 빠르게 온라인 존재감 만들고 싶은 분</p>
+          </div>
+          <ul class="pcard-list">
+            <li>1페이지 풀스크롤 랜딩</li>
+            <li>기획·카피·디자인·코딩 전부 포함</li>
+            <li>모바일 반응형</li>
+            <li>상담 신청 폼</li>
+            <li>네이버·구글 검색 노출 기본 세팅</li>
+            <li>납품 후 1개월 무료 수정</li>
+          </ul>
+          <a href="./index.html#cta" class="pcard-btn pcard-btn--outline">상담 신청하기 →</a>
+        </div>
+
+        <div class="pcard pcard--featured">
+          <div class="pcard-badge">가장 많이 선택</div>
+          <div>
+            <span class="pcard-label">전문가 페이지</span>
+            <div class="pcard-price"><span class="pcard-num">300</span><span class="pcard-unit">만원</span></div>
+            <p class="pcard-for">✦ 신뢰받는 전문가 브랜드 구축<br>✦ 문의·상담 전환이 목표인 분</p>
+          </div>
+          <ul class="pcard-list">
+            <li>멀티섹션 (5~7섹션)</li>
+            <li>타깃·강점 분석 후 카피 설계</li>
+            <li>포트폴리오·후기 섹션</li>
+            <li>네이버·구글 검색 노출 기본 세팅</li>
+            <li>납품 후 2개월 무료 수정</li>
+          </ul>
+          <a href="./index.html#cta" class="pcard-btn pcard-btn--fill">상담 신청하기 →</a>
+        </div>
+
+        <div class="pcard">
+          <div class="pcard-badge" style="background:var(--ink);color:#fff">제작+관리 한번에</div>
+          <div>
+            <span class="pcard-label">올인원 패키지</span>
+            <div class="pcard-price"><span class="pcard-num">450</span><span class="pcard-unit">만원</span></div>
+            <p class="pcard-for" style="color:var(--ink3)">✦ 정가 480만원 → <strong style="color:var(--acc)">30만원 절약</strong><br>✦ 만들고 바로 운영까지 한번에</p>
+          </div>
+          <ul class="pcard-list">
+            <li>전문가 페이지 전체 포함</li>
+            <li>케어 베이직 6개월 포함</li>
+            <li>월 2편 블로그 콘텐츠 (총 12편)</li>
+            <li>키워드 기반 SEO 글 작성</li>
+            <li>월 1회 수정대응</li>
+            <li>납품 후 2개월 무료 수정</li>
+          </ul>
+          <a href="./index.html#cta" class="pcard-btn pcard-btn--outline">상담 신청하기 →</a>
+        </div>
+      </div>
+      <p class="price-note">✦ 도메인·호스팅 별도 (연 3~5만원) &nbsp;·&nbsp; 강제 계약 없음 &nbsp;·&nbsp; 견적은 상담 후 확정</p>
+    </div>
+
+    <!-- 케어 플랜 -->
+    <div class="price-sec">
+      <p class="sec-title">케어 플랜</p>
+      <p class="sec-sub"><strong style="color:var(--ink);font-size:15px">검색 유입은 결국 꾸준히 쌓인 콘텐츠에서 나옵니다.</strong><br>홈페이지만 만들고 끝이 아니라, 교육 비즈니스를 아는 사람이 업의 언어로 글을 써드립니다. 네이버 블로그 키워드를 꾸준히 쌓아 홈페이지로 자연스럽게 유입되는 구조를 함께 만들어갑니다.</p>
+
+      <div class="care-compare">
+        <table class="ctable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>베이직</th>
+              <th class="ctable-featured">스탠다드<span class="ctable-badge">추천</span></th>
+              <th>프로</th>
+            </tr>
+            <tr class="ctable-price-row">
+              <td></td>
+              <td><span class="ctable-num">30</span><span class="ctable-unit">만원/월</span><br><span class="ctable-annual">연간 324만원</span></td>
+              <td class="ctable-featured"><span class="ctable-num">60</span><span class="ctable-unit">만원/월</span><br><span class="ctable-annual">연간 648만원</span></td>
+              <td><span class="ctable-num">100</span><span class="ctable-unit">만원/월</span><br><span class="ctable-annual">연간 1,080만원</span></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ctable-label">네이버 블로그 콘텐츠</td>
+              <td>월 2편</td>
+              <td class="ctable-featured">월 4편</td>
+              <td>월 6편</td>
+            </tr>
+            <tr>
+              <td class="ctable-label">키워드 리서치<br><span class="ctable-desc">고객이 검색할 단어를 미리 찾아 글에 반영</span></td>
+              <td>기본</td>
+              <td class="ctable-featured">심화</td>
+              <td>심화</td>
+            </tr>
+            <tr>
+              <td class="ctable-label">홈페이지 유입 링크<br><span class="ctable-desc">글마다 홈페이지로 연결되는 링크 삽입</span></td>
+              <td>✓</td>
+              <td class="ctable-featured">✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td class="ctable-label">텍스트·이미지 수정대응</td>
+              <td>월 1회</td>
+              <td class="ctable-featured">월 2회</td>
+              <td>월 3회</td>
+            </tr>
+            <tr>
+              <td class="ctable-label">월간 키워드 현황 공유</td>
+              <td>—</td>
+              <td class="ctable-featured">—</td>
+              <td>✓</td>
+            </tr>
+            <tr class="ctable-cta-row">
+              <td></td>
+              <td><a href="./index.html#cta" class="pcard-btn pcard-btn--outline">문의하기</a></td>
+              <td class="ctable-featured"><a href="./index.html#cta" class="pcard-btn pcard-btn--fill">문의하기</a></td>
+              <td><a href="./index.html#cta" class="pcard-btn pcard-btn--outline">문의하기</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="price-note">✦ 네이버 블로그 기반 운영 &nbsp;·&nbsp; 최소 계약 3개월 &nbsp;·&nbsp; 제작 고객 첫 달 무료 &nbsp;·&nbsp; 연간 결제 시 10% 할인</p>
+    </div>
+      <p class="price-note">✦ 수정대응: 텍스트·이미지 교체 기준, 구조 변경·기능 추가 별도 &nbsp;·&nbsp; 최소 3개월 &nbsp;·&nbsp; 제작 고객 첫 달 무료</p>
+    </div>
+
+    <!-- 하단 CTA -->
+    <div class="price-cta">
+      <h3>궁금한 점이 있으신가요?</h3>
+      <p>가격, 범위, 일정 — 부담 없이 여쭤보세요.<br>상담 후 견적 확정, 강제 계약 없습니다.</p>
+      <a href="./index.html#cta">상담 신청하기 →</a>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
