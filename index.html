@@ -1947,16 +1947,16 @@ body{word-break:keep-all;overflow-wrap:break-word}
 .price-float{
   position:fixed;right:16px;bottom:140px;z-index:91;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-  width:52px;height:52px;border-radius:50%;
-  background:#fff;color:var(--ink);
-  box-shadow:0 4px 20px -4px rgba(26,18,8,.3);
-  border:1.5px solid rgba(26,18,8,.08);
-  font-size:10px;font-weight:800;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--acc);color:var(--acc-fg);
+  box-shadow:0 6px 22px -4px rgba(var(--acc-rgb),.6);
+  border:none;
+  font-size:10.5px;font-weight:800;
   text-decoration:none;
   transition:transform .2s,box-shadow .2s;
 }
 .price-float svg{width:18px;height:18px}
-.price-float:hover{transform:translateY(-2px);box-shadow:0 8px 24px -4px rgba(26,18,8,.22)}
+.price-float:hover{transform:translateY(-2px);box-shadow:0 10px 28px -4px rgba(var(--acc-rgb),.7)}
 @media(min-width:760px){.price-float{right:24px;bottom:100px}}
 
 .pm-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9998;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto}
@@ -2022,7 +2022,8 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <a href="#how">차별점</a>
       <a href="#nums">이력</a>
       <a href="#work">포트폴리오</a>
-      <a href="./price.html" target="_blank">가격</a>
+      <a href="./price.html">가격</a>
+      <a href="./care.html">케어</a>
       <a href="#faq">FAQ</a>
       <a href="#process">진행과정</a>
       <a href="#cta">상담신청</a>
@@ -2036,9 +2037,11 @@ body{word-break:keep-all;overflow-wrap:break-word}
     <a href="#how">전문성·차별점</a>
     <a href="#nums">이력·강점</a>
     <a href="#work">포트폴리오</a>
-    <a href="./price.html" target="_blank">가격</a>
+    <a href="./price.html">가격</a>
+    <a href="./care.html">케어 프로그램</a>
     <a href="#faq">FAQ</a>
     <a href="#process">진행 과정</a>
+    <a href="./refund.html">취소·환불 규정</a>
     <a href="#cta">상담 신청</a>
   </div>
 </nav>
@@ -2575,7 +2578,13 @@ body{word-break:keep-all;overflow-wrap:break-word}
       <svg viewBox="0 0 24 24"><use href="#ic-insta"/></svg>
     </a>
   </nav>
-  © 2026 <b>page.damda</b><br><span style="font-size:11px;opacity:.5">문의: 상담 신청 폼 또는 카카오톡 채널 · 본 사이트 콘텐츠의 저작권은 page.damda에 있습니다.</span>
+  © 2026 <b>page.damda</b><br>
+  <span style="font-size:11px;opacity:.5">문의: 상담 신청 폼 또는 카카오톡 채널 · 본 사이트 콘텐츠의 저작권은 page.damda에 있습니다.</span><br>
+  <span style="font-size:11px;opacity:.6;display:inline-block;margin-top:8px">
+    <a href="./price.html" style="text-decoration:underline">가격</a> ·
+    <a href="./care.html" style="text-decoration:underline">케어 프로그램</a> ·
+    <a href="./refund.html" style="text-decoration:underline">취소·환불 규정</a>
+  </span>
 </footer>
 
 <!-- STICKY BOTTOM CTA -->
@@ -3029,10 +3038,10 @@ function submitLead(e){
 </div>
 
 
-<!-- PRICE FLOAT BTN -->
-<a href="./price.html" target="_blank" class="price-float" aria-label="가격 안내">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
-  <span>가격</span>
+<!-- CONSULT FLOAT BTN -->
+<a href="#cta" class="price-float" aria-label="상담 신청">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span>상담</span>
 </a>
 </body>
 </html>
