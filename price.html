@@ -133,6 +133,37 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
   .h1{font-size:30px}
   .addons{padding:28px 24px}
 }
+
+/* ── 케어 섹션 (care 병합) ── */
+.care-divider{margin:60px 0 0;padding-top:44px;border-top:1px solid var(--line2)}
+#care{scroll-margin-top:80px}
+.banner{border:1px solid var(--line);border-radius:14px;background:#fff;padding:24px 28px;margin-bottom:8px}
+.banner-l{font-size:12px;font-weight:800;letter-spacing:.5px;color:var(--acc-d);margin-bottom:9px}
+.banner-t{font-size:14.5px;color:var(--ink2);line-height:1.8}
+.banner-t b{font-weight:800}.banner-t .g{color:var(--acc-d);font-weight:700}
+.sec-head{margin:44px 0 16px}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.5px;color:var(--acc-d);margin-bottom:11px}
+.sec-tag .n{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px;background:var(--acc);color:var(--acc-fg);font-size:12px;font-weight:900}
+.sec-title{font-family:var(--serif);font-size:24px;font-weight:800;letter-spacing:-.8px;margin-bottom:6px}
+.sec-sub{font-size:14px;color:var(--ink3);line-height:1.65;max-width:640px}
+.tiers-2{grid-template-columns:repeat(2,1fr)}
+.tiers-2 .tier-who{color:var(--ink4);margin:0 0 14px}
+.tier-year{font-size:12px;color:var(--acc-d);font-weight:700;margin-top:9px}
+.cmp-wrap{margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{background:var(--dark1);color:#F3F1EC;padding:14px 10px;font-weight:700;text-align:center;font-size:12.5px;line-height:1.4}
+thead th:first-child{text-align:left;padding-left:22px}
+thead th.hl{background:#262019;color:var(--acc)}
+tbody td{padding:13px 10px;border-bottom:1px solid var(--line);text-align:center;color:var(--ink3)}
+tbody td:first-child{text-align:left;padding-left:22px;font-weight:600;color:var(--ink)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#FAFAF8}
+@media(max-width:780px){
+  .tiers-2{display:block}
+  table{font-size:11.5px}
+  thead th,tbody td{padding:10px 5px}
+  thead th:first-child,tbody td:first-child{padding-left:13px}
+}
 </style>
 </head>
 <body>
@@ -215,7 +246,92 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
     <div class="note"><b>도메인·호스팅 별도</b> — 연 3~5만원 수준 / 모든 금액 부가세 별도</div>
     <div class="note"><b>강제 유지 계약 없음</b> — 한 번 제작으로 홈페이지는 평생 내 자산입니다.</div>
     <div class="note"><b>업그레이드 가능</b> — 스타터로 시작 후 상위 플랜 차액으로 언제든 확장할 수 있습니다.</div>
-    <div class="note"><b>케어는 선택</b> — <a href="./care.html" style="color:var(--acc-d);font-weight:700;text-decoration:underline">케어 프로그램</a>은 운영이 필요한 분만 별도로 이용하실 수 있습니다.</div>
+    <div class="note"><b>케어는 선택</b> — <a href="#care" style="color:var(--acc-d);font-weight:700;text-decoration:underline">케어 프로그램</a>은 운영이 필요한 분만 별도로 이용하실 수 있습니다.</div>
+  </div>
+
+  <!-- ── 케어 가격 (care 병합) ── -->
+  <div class="care-divider" id="care">
+    <div class="eyebrow">CARE PROGRAM</div>
+    <h2 class="h1" style="font-size:30px">만들고 끝이 아닙니다. <span class="hl">케어 프로그램</span></h2>
+    <p class="hsub">홈페이지는 완성이 시작입니다. 사이트를 안정적으로 관리하거나, 검색 유입까지 키우거나 — 필요한 만큼만 선택하세요. <b>케어는 선택사항</b>입니다.</p>
+  </div>
+
+  <div class="banner">
+    <div class="banner-l">제작은 소유, 운영은 선택</div>
+    <div class="banner-t">홈페이지는 한 번 만들면 <b>평생 내 자산</b>입니다. <span class="g">사이트 관리만</span> 맡기고 싶다면 유지관리 케어를, <span class="g">검색 유입까지</span> 키우고 싶다면 콘텐츠 케어를 선택하세요.</div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-tag"><span class="n">1</span>유지관리 케어</span>
+    <div class="sec-title">바뀔 때마다, 대신 관리해드립니다</div>
+    <div class="sec-sub">page.damda 홈페이지는 직접 제작 방식이라 내용 수정엔 전문가의 손이 필요합니다. 가격이나 일정이 바뀔 때마다 직접 손댈 필요 없이 맡기시면 됩니다.</div>
+  </div>
+  <div class="tiers tiers-2">
+    <div class="tier">
+      <span class="tier-flag ph">·</span>
+      <div class="tier-name">LITE</div>
+      <div class="tier-who">가끔 내용만 바뀌는 분</div>
+      <div class="tier-price"><span class="tier-num">9</span><span class="tier-unit">만원/월</span></div>
+      <div class="tier-year">연 결제 시 100만원</div>
+      <ul class="feat" id="m1"></ul>
+      <a href="./index.html#cta" class="tier-btn tier-btn--outline">문의하기 →</a>
+    </div>
+    <div class="tier featured">
+      <span class="tier-flag">실속형</span>
+      <div class="tier-name">STANDARD</div>
+      <div class="tier-who">자주 업데이트하는 분</div>
+      <div class="tier-price"><span class="tier-num">19</span><span class="tier-unit">만원/월</span></div>
+      <div class="tier-year">연 결제 시 205만원 (10% 할인)</div>
+      <ul class="feat" id="m2"></ul>
+      <a href="./index.html#cta" class="tier-btn tier-btn--fill">문의하기 →</a>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <span class="sec-tag"><span class="n">2</span>콘텐츠 케어</span>
+    <div class="sec-title">검색에서 찾아오게 만듭니다</div>
+    <div class="sec-sub">유지관리에 더해, 교육 비즈니스를 아는 사람이 네이버 블로그를 꾸준히 쌓아 홈페이지로 유입을 연결합니다.</div>
+  </div>
+  <div class="tiers tiers-2">
+    <div class="tier">
+      <span class="tier-flag ph">·</span>
+      <div class="tier-name">BASIC</div>
+      <div class="tier-who">꾸준히 시작하고 싶은 분</div>
+      <div class="tier-price"><span class="tier-num">29</span><span class="tier-unit">만원/월</span></div>
+      <div class="tier-year">연 결제 시 313만원 (10% 할인)</div>
+      <ul class="feat" id="c1"></ul>
+      <a href="./index.html#cta" class="tier-btn tier-btn--outline">문의하기 →</a>
+    </div>
+    <div class="tier featured">
+      <span class="tier-flag">가장 추천</span>
+      <div class="tier-name">STANDARD</div>
+      <div class="tier-who">검색 유입을 제대로 키우고 싶은 분</div>
+      <div class="tier-price"><span class="tier-num">49</span><span class="tier-unit">만원/월</span></div>
+      <div class="tier-year">연 결제 시 529만원 (10% 할인)</div>
+      <ul class="feat" id="c2"></ul>
+      <a href="./index.html#cta" class="tier-btn tier-btn--fill">문의하기 →</a>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <div class="sec-title">전체 비교</div>
+    <div class="sec-sub">필요한 관리 강도에 맞게 선택하세요.</div>
+  </div>
+  <div class="cmp-wrap">
+    <table>
+      <thead><tr>
+        <th>항목</th><th>유지 LITE<br>9만</th><th>유지 STD<br>19만</th><th>콘텐츠 BASIC<br>29만</th><th class="hl">콘텐츠 STD<br>49만</th>
+      </tr></thead>
+      <tbody id="cmp"></tbody>
+    </table>
+  </div>
+
+  <div class="notes">
+    <div class="notes-t">케어 안내사항</div>
+    <div class="note"><b>케어는 3개월 단위로 운영됩니다.</b> 검색 노출은 보통 3개월부터 조금씩, 6개월부터 본격적으로 나타납니다. 제대로 된 유입 효과를 보시려면 6개월 이상을 권장드립니다.</div>
+    <div class="note"><b>최소 계약 3개월</b> · 모든 금액 부가세 별도</div>
+    <div class="note"><b>제작 고객 혜택</b> — page.damda에서 제작하신 분은 유지관리 케어 첫 달을 무료로 시작하실 수 있습니다.</div>
+    <div class="note"><b>제작과 케어는 별개</b> — 홈페이지는 한 번 제작으로 영구 소유하시며, 케어는 관리가 필요하신 분만 선택하는 월 단위 서비스입니다.</div>
   </div>
 </div>
 
@@ -234,6 +350,29 @@ const d={
   f3:[['<b>프로페셔널 전체 포함</b>',1],['멀티페이지 + 갤러리·탭',1],['퍼스널 브랜딩 설계',1],['프로그램 · 공개과정 페이지',1],['팝업 · 카카오 · SNS 연동',1],['<b>블로그 케어 1개월 무료</b>',1]]
 };
 for(const id in d){const ul=document.getElementById(id);d[id].forEach(([t,on])=>{const li=document.createElement('li');if(!on)li.className='off';li.innerHTML=(on?ck:em)+t;ul.appendChild(li);});}
+
+// ── 케어 플랜 항목 (care 병합) ──
+const careFeat={
+  m1:[['내용 수정·재배포 <b>월 1회</b>',1],['도메인 갱신 관리',1],['사이트 점검 및 오류 대응',1],['모바일·브라우저 호환 관리',1],['블로그 콘텐츠 발행',0]],
+  m2:[['내용 수정·재배포 <b>월 2회</b>',1],['도메인 갱신 관리',1],['사이트 점검 및 오류 대응',1],['모바일·브라우저 호환 관리',1],['<b>섹션 추가</b> 등 소규모 개선',1],['블로그 콘텐츠 발행',0]],
+  c1:[['유지관리 <b>전부 포함</b>',1],['내용 수정·재배포 <b>월 3회</b>',1],['네이버 블로그 <b>월 2편</b>',1],['기본 키워드 리서치 + 유입 설계',1],['키워드 현황 리포트',0]],
+  c2:[['유지관리 <b>전부 포함</b>',1],['내용 수정·재배포 <b>월 4회</b>',1],['네이버 블로그 <b>월 3편</b>',1],['<b>심화</b> 키워드 리서치 + 유입 설계',1],['<b>월간 키워드 현황 리포트</b>',1]]
+};
+for(const id in careFeat){const ul=document.getElementById(id);if(!ul)continue;careFeat[id].forEach(([t,on])=>{const li=document.createElement('li');if(!on)li.className='off';li.innerHTML=(on?ck:em)+t;ul.appendChild(li);});}
+const careRows=[
+  ['내용 수정·재배포','월 1회','월 2회','월 3회','월 4회'],
+  ['도메인·사이트 점검','y','y','y','y'],
+  ['오류·호환 대응','y','y','y','y'],
+  ['소규모 개선','n','y','n','y'],
+  ['네이버 블로그','n','n','월 2편','월 3편'],
+  ['키워드 리서치','n','n','기본','심화'],
+  ['유입 링크 설계','n','n','y','y'],
+  ['키워드 현황 리포트','n','n','n','y']
+];
+const ckS='<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3.5 8.5L6.5 11.5L12.5 4.5" stroke="#E6A312" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const emS='<svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#D5D5D8" stroke-width="1.5"/></svg>';
+const careTb=document.getElementById('cmp');
+if(careTb)careRows.forEach(r=>{const tr=document.createElement('tr');r.forEach((c,i)=>{const td=document.createElement('td');if(i===0)td.textContent=c;else if(c==='y')td.innerHTML=ckS;else if(c==='n')td.innerHTML=emS;else td.textContent=c;tr.appendChild(td);});careTb.appendChild(tr);});
 </script>
 </body>
 </html>
