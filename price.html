@@ -212,9 +212,15 @@ tbody tr:nth-child(even){background:#FAFAF8}
 </head>
 <body>
 
+<!-- ATMOSPHERIC BACKDROP -->
+<div class="atmos" aria-hidden="true">
+  <div class="atmos-wash"></div>
+  <div class="atmos-dust" id="dust"></div>
+</div>
+
 <div class="topbar">
   <div class="topbar-in">
-    <a href="./index.html" class="logo">page<span>.</span>damda</a>
+    <a href="./index.html" class="logo">page<span>.</span>damda</a><span class="logo-tag">교육 브랜딩 스튜디오</span>
     <a href="./index.html" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>홈으로</a>
   </div>
 </div>
@@ -244,18 +250,18 @@ tbody tr:nth-child(even){background:#FAFAF8}
       <ul class="feat" id="f1"></ul>
       <a href="./index.html#cta" class="tier-btn tier-btn--outline">상담 신청하기 →</a>
     </div>
-    <div class="tier featured">
-      <span class="tier-flag">가장 추천</span>
+    <div class="tier">
+      <span class="tier-flag ph">·</span>
       <div class="tier-name">교육 브랜드 구축</div>
       <div class="tier-priceRow"><span class="tier-old">500만</span><span class="tier-spark"><span class="tw">✦</span> 오픈특가 · 3팀 한정</span></div>
       <div class="tier-price"><span class="tier-num">350</span><span class="tier-unit">만원~</span></div>
       <p class="tier-who">포지셔닝부터 접점까지, 선택받는 교육 브랜드를 만들고 싶은 분</p>
       <div class="tier-time">기간 약 4~6주</div>
       <ul class="feat" id="f2"></ul>
-      <a href="./index.html#cta" class="tier-btn tier-btn--fill">상담 신청하기 →</a>
+      <a href="./index.html#cta" class="tier-btn tier-btn--outline">상담 신청하기 →</a>
     </div>
     <div class="tier">
-      <span class="tier-flag">브랜드 시스템</span>
+      <span class="tier-flag ph">·</span>
       <div class="tier-name">교육기업 브랜드 시스템</div>
       <div class="tier-priceRow"><span class="tier-old">700만~</span></div>
       <div class="tier-price"><span class="tier-num" style="font-size:28px">별도 문의</span></div>
@@ -278,14 +284,14 @@ tbody tr:nth-child(even){background:#FAFAF8}
       <div class="entry-title">브랜드 진단 · 방향 설정 세션</div>
       <p class="entry-desc">흩어진 전문성과 강점을 1:1로 함께 정리합니다. 포지셔닝·핵심 메시지 방향을 잡고, 정리된 <b>진단서(방향성 리포트)</b>를 드려요. 무엇을 어떻게 내세울지 막막한 분께 가장 좋습니다.</p>
       <div class="entry-feat">
-        <span>· 1:1 진단 코칭 1시간</span>
+        <span>· 1:1 진단 코칭 30분</span>
         <span>· 포지셔닝 · 메시지 방향 정리</span>
         <span>· 진단서(리포트) 공유</span>
       </div>
     </div>
     <div class="entry-r">
-      <div class="entry-price"><span class="entry-num">50</span><span class="entry-unit">만원</span></div>
-      <div class="entry-time">1시간 · 온라인</div>
+      <div class="entry-price"><span class="entry-num">45</span><span class="entry-unit">만원</span></div>
+      <div class="entry-time">30분 · 온라인</div>
       <div class="entry-back">본 프로젝트 계약 시 <b>진단비 전액 차감</b></div>
       <a href="./index.html#cta" class="entry-btn">진단 세션 신청 →</a>
     </div>
@@ -342,7 +348,7 @@ tbody tr:nth-child(even){background:#FAFAF8}
     <div class="note"><b>모든 가격 부가세 별도</b> · 강제 유지 계약 없음 · 정확한 견적은 상담 후 확정</div>
   </div>
 
-  <div class="notes" style="background:var(--dark1);border:none">
+  <div class="notes notes--dark">
     <div class="notes-t" style="color:var(--acc)">오픈 특가 안내</div>
     <div class="note" style="color:rgba(243,241,236,.75)"><b style="color:#fff">오픈 특가는 각 서비스별 선착순 3팀</b>에 한하며, 계약금 입금 순으로 적용됩니다.</div>
     <div class="note" style="color:rgba(243,241,236,.75)">교육기업 브랜드 시스템은 프로젝트 범위에 따라 <b style="color:#fff">별도 견적</b>으로 안내드립니다.</div>
@@ -364,6 +370,107 @@ const d={
   f3:[['<b>브랜드 구축 전체 포함</b>',1],['교육기업 브랜드 방향 · 메시지 체계',1],['대표 프로그램 1~3개 구조화',1],['커리큘럼 · 과정 포트폴리오 체계',1],['<b>기업 제안서 마스터 1종</b> 기획·디자인',1],['프로필·프로그램소개·후기 브랜드 일관성',1]]
 };
 for(const id in d){const ul=document.getElementById(id);if(!ul)continue;d[id].forEach(([t,on])=>{const li=document.createElement('li');if(!on)li.className='off';li.innerHTML=(on?ck:em)+t;ul.appendChild(li);});}
+</script>
+
+<!-- ════ page.damda design language (matches index) ════ -->
+<style id="pd-skin">
+html,body{background:#FBF7EE!important}
+body{position:relative}
+.atmos{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.atmos-wash{position:absolute;inset:0;background:
+  radial-gradient(60% 45% at 50% 0%,rgba(255,236,200,.5),transparent 70%),
+  radial-gradient(70% 55% at 50% 100%,rgba(244,239,227,.9),transparent 60%),
+  linear-gradient(180deg,rgba(244,239,227,.5),rgba(244,239,227,.82))}
+.atmos::before{content:'';position:absolute;inset:-25%;
+  background:
+    radial-gradient(34% 34% at 24% 30%,rgba(255,184,28,.16),transparent 62%),
+    radial-gradient(40% 40% at 78% 66%,rgba(200,84,46,.1),transparent 62%),
+    radial-gradient(30% 30% at 62% 16%,rgba(255,236,200,.22),transparent 60%);
+  animation:meshDrift 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes meshDrift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(2.5%,-2%) scale(1.07)}100%{transform:translate(-2.5%,2.5%) scale(1.03)}}
+.atmos-dust{position:absolute;inset:0;overflow:hidden;mix-blend-mode:screen;opacity:.5}
+.atmos-dust span{position:absolute;display:block;width:3px;height:3px;border-radius:50%;background:radial-gradient(circle,rgba(255,235,180,.9) 0%,rgba(255,235,180,0) 70%);animation:dustFloat linear infinite;will-change:transform,opacity}
+@keyframes dustFloat{0%{transform:translate(0,110vh) scale(.6);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translate(var(--dx,30px),-10vh) scale(1.2);opacity:0}}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.04;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .08 0 0 0 0 .03 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.topbar,.wrap,.botcta{position:relative;z-index:1}
+.topbar{background:rgba(251,247,238,.82)!important}
+
+.topbar-in .logo{display:inline-flex;align-items:center}
+.logo-tag{font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.2px;line-height:1.2;padding-left:11px;margin-left:11px;border-left:1px solid var(--line2);white-space:nowrap}
+@media(max-width:440px){.logo-tag{display:none}}
+
+.h1{font-weight:600!important;letter-spacing:-2px!important}
+.h1 .hl{color:var(--ink)!important;font-weight:800!important;position:relative;display:inline-block}
+.h1 .hl::after{content:'';position:absolute;left:-2px;right:-2px;bottom:4px;height:13px;background:rgba(var(--acc-rgb),.42);z-index:-1;border-radius:3px}
+.sec-title{font-weight:500!important;letter-spacing:-1px!important}
+.sec-title b,.sec-title em{font-weight:800!important}
+
+.flow,.tiers,.care,.notes,.cmp-wrap{box-shadow:0 22px 50px -30px rgba(60,44,12,.32),0 2px 8px -5px rgba(60,44,12,.14)!important}
+.tier,.care-col,.flow-step{background:rgba(255,255,255,.86)!important}
+.tier.featured,.care-col.hot{background:rgba(255,251,240,.92)!important}
+.entry,.addons{box-shadow:0 34px 64px -30px rgba(40,28,8,.6),0 4px 14px -8px rgba(40,28,8,.4)!important}
+
+@keyframes btnShine{0%{left:-60%}55%,100%{left:140%}}
+.tier-btn--fill,.entry-btn{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#FFCB4D 0%,var(--acc) 44%,var(--acc-d) 100%)!important;
+  color:var(--acc-fg)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -2px 0 rgba(0,0,0,.16),0 12px 26px -10px rgba(var(--acc-rgb),.6)!important;
+}
+.tier-btn--fill::after,.entry-btn::after{content:'';position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:btnShine 3.6s ease-in-out infinite;pointer-events:none}
+/* no shine on the featured (high-price) CTA */
+.tier.featured .tier-btn--fill::after{display:none!important}
+.tier.featured .tier-btn--fill{animation:none!important}
+/* keep the dark open-special notes box dark (override the light card skin) */
+.notes--dark{background:rgba(255,255,255,.74)!important;border:1.5px solid rgba(40,30,12,.16)!important}
+.notes--dark .notes-t{color:var(--acc-d)!important}
+.notes--dark .note{color:var(--ink3)!important}
+.notes--dark .note b{color:var(--ink)!important}
+.tier-btn--outline{
+  background:linear-gradient(180deg,#fff,#F6F1E6)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 8px 20px -12px rgba(60,44,12,.3)!important;
+}
+.botcta-p{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#2E2A24 0%,#16130F 100%)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -2px 0 rgba(0,0,0,.4),0 12px 28px -12px rgba(18,20,26,.6)!important;
+}
+.botcta-p::before{content:'';position:absolute;top:9px;right:16px;width:6px;height:6px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 3px rgba(var(--acc-rgb),.25)}
+.botcta-p::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);transform:skewX(-20deg);animation:btnShine 4.6s ease-in-out infinite;pointer-events:none}
+
+/* editorial blocks — square hairline frames, dark inverted feature (not soft rounded cards) */
+.tiers,.care,.tiers-2{border:none!important;background:none!important;overflow:visible!important;box-shadow:none!important;gap:12px!important}
+.tier,.care-col{
+  border:1.5px solid rgba(40,30,12,.18)!important;border-radius:3px!important;
+  background:rgba(255,255,255,.74)!important;box-shadow:none!important;
+  transition:border-color .2s,background .2s!important;overflow:visible;
+}
+.tier:hover,.care-col:hover{border-color:rgba(40,30,12,.42)!important;background:#fff!important;transform:none!important}
+.flow,.notes,.cmp-wrap{border-radius:3px!important;box-shadow:none!important;border:1.5px solid rgba(40,30,12,.16)!important;background:rgba(255,255,255,.74)!important}
+.flow-step{background:none!important}
+.entry,.addons{border-radius:4px!important}
+
+/* featured tier & hot care → white with a strong dark frame (no black fill) */
+.tier.featured,.care-col.hot{background:#fff!important;border:2px solid var(--acc)!important;color:var(--ink)!important}
+.tier.featured::before{display:none!important}
+.tier-num{background:none!important;-webkit-text-fill-color:var(--ink)!important;color:var(--ink)!important}
+@media(max-width:780px){.tiers,.care,.tiers-2{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}.tier,.care-col{border-bottom:1.5px solid rgba(40,30,12,.18)!important}}
+
+.reveal-init{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal-init.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.atmos::before,.atmos-dust span,.tier-btn--fill::after,.entry-btn::after,.botcta-p::after{animation:none!important}.reveal-init{opacity:1;transform:none;transition:none}}
+</style>
+<script>
+(function(){
+  var dust=document.getElementById('dust');
+  if(dust){for(var i=0;i<22;i++){var s=document.createElement('span');var dur=(9+Math.random()*12).toFixed(1);s.style.left=(Math.random()*100)+'%';s.style.animationDuration=dur+'s';s.style.animationDelay=(-Math.random()*dur)+'s';s.style.setProperty('--dx',((Math.random()*80-40)).toFixed(0)+'px');s.style.opacity=(.4+Math.random()*.6).toFixed(2);dust.appendChild(s);}}
+  var targets=document.querySelectorAll('.hero,.flow,.tiers .tier,.sec-head,.entry,.care .care-col,.notes,.addons');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    targets.forEach(function(t,i){t.classList.add('reveal-init');t.style.transitionDelay=((i%3)*70)+'ms';io.observe(t);});
+  }
+})();
 </script>
 </body>
 </html>
